@@ -1,7 +1,9 @@
 // @refresh reload
 import { Suspense } from 'solid-js';
 import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from 'solid-start';
+// CSS files
 import './css/theme.css';
+
 export default function Root() {
 	return (
 		<Html lang="en">
@@ -12,11 +14,22 @@ export default function Root() {
 			</Head>
 			<Body>
 				<ErrorBoundary>
-					<A href="/">Index</A>
-					<A href="/about">About</A>
+					<A class="" href="/">
+						Index
+					</A>
+					<A class="" href="/about">
+						About
+					</A>
 					<Suspense>
 						<main>
 							<div class="container">
+								{/* 								<Routes>
+									<FileRoutes />
+								</Routes> */}
+								<div class="card">
+									<h1 class="ultratitle">Sean Outram</h1>
+									<h2 class="subtitle">Software Engineer by hobby</h2>
+								</div>
 								<Routes>
 									<FileRoutes />
 								</Routes>

@@ -1,1 +1,17 @@
 @import url('https://css.hackclub.com/theme.css');
+
+/* Colour overrides */
+:root {
+	--text: var(--white);
+}
+
+/* Class overrides */
+body {
+	background-color: var(--darker);
+	color: var(--green);
+}
+.card {
+	text-align: center;
+	background-color: var(--dark);
+	color: var(--text);
+}
