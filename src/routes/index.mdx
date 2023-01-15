@@ -1,0 +1,22 @@
+import { A } from 'solid-start';
+import ProjectViewer from './../components/ProjectViewer';
+
+<div class="card">
+    ## About me
+
+    I'm a software and hardware nerd, and I am constantly trying out things.
+    I'm working on multiple projects, and I'm always looking for new ideas.
+
+</div>
+<br />
+<div class="card">
+    ## Projects
+    <ProjectViewer projects={[
+        {
+            title: "IkeaStock",
+            description: "A simple web stock checker for Ikea products with real time information.",
+            link: "https://ikeastock.app",
+            badges: ["TypeScript", "Next.js", "API"]
+        }
+    ]}/>
+</div>

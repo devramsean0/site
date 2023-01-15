@@ -1,9 +1,9 @@
 // @refresh reload
 import { Suspense } from 'solid-js';
-import { A, Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from 'solid-start';
+import { Body, ErrorBoundary, FileRoutes, Head, Html, Meta, Routes, Scripts, Title } from 'solid-start';
 // CSS files
 import './css/theme.css';
-
+import './css/fonts.css';
 export default function Root() {
 	return (
 		<Html lang="en">
@@ -14,12 +14,6 @@ export default function Root() {
 			</Head>
 			<Body>
 				<ErrorBoundary>
-					<A class="" href="/">
-						Index
-					</A>
-					<A class="" href="/about">
-						About
-					</A>
 					<Suspense>
 						<main>
 							<div class="container">
@@ -28,8 +22,9 @@ export default function Root() {
 								</Routes> */}
 								<div class="card">
 									<h1 class="ultratitle">Sean Outram</h1>
-									<h2 class="subtitle">Software Engineer by hobby</h2>
+									<h2 class="subtitle">Software and Hardware enthusiast</h2>
 								</div>
+								<br />
 								<Routes>
 									<FileRoutes />
 								</Routes>
