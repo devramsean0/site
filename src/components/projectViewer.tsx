@@ -1,8 +1,16 @@
 // @refresh reload
-import { For } from 'solid-js';
+import { createSignal, For, Show } from 'solid-js';
 import { A } from 'solid-start';
 
 const ProjectViewer = (props: any) => {
+	const [moreProjects, setMoreProjects] = createSignal(false);
+	if (props.projects.length === 0) return <p>No projects to show</p>; // If there are no projects, show this message
+	if (props.projects.length > 2) {
+		// If there are more than 3 projects, show the first 3
+		props.projects = props.projects.slice(0, 2);
+		setMoreProjects(true);
+	}
+	const encodedProjects = encodeURIComponent(JSON.stringify(props.projects));
 	return (
 		<div>
 			<For each={props.projects}>
@@ -17,6 +25,9 @@ const ProjectViewer = (props: any) => {
 					</div>
 				)}
 			</For>
+			<Show when={moreProjects()} fallback={''}>
+				<a href={`/projects/${encodedProjects}`}>View more projects</a>
+			</Show>
 		</div>
 	);
 };
