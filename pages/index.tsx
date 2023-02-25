@@ -1,7 +1,9 @@
 import Head from "next/head";
-import grid from "@/styles/grid.module.scss";
+import grid from "@/styles/homeGrid.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   const experience = [
@@ -24,6 +26,8 @@ export default function Home() {
       <Head>
         <title>Sean Outram</title>
       </Head>
+      <div className={grid.parent}>
+        <Navbar grid={grid}/>
       <div className={grid.headerImage}>
       </div>
       <div className={grid.about} id="about">
@@ -69,9 +73,8 @@ export default function Home() {
         </center>
       </div>
       <div className={grid.footer}>
-        <center>
-          <p>&copy; Sean Outram 2023</p>
-        </center>
+        <Footer />
+      </div>
       </div>
     </>
   )
