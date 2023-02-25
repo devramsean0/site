@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer";
 export default function Home() {
   const experience = [
     {
-      job: "HWH reviewer",
+      job: "HWW reviewer",
       description: "Reviewed PRs for Hackclub's Hardware Winter Wonderland event",
       date: "17th Jan 2022 - 24th Feb 2022",
       image: "https://assets.hackclub.com/icon-rounded.svg",
