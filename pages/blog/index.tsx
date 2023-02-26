@@ -1,24 +1,53 @@
 import { Navbar } from "@/components/navbar";
 import { getAllPosts } from "@/lib/md";
 import grid from "@/styles/blogHomeGrid.module.scss";
+import { useRouter } from "next/router";
 
 export default function BlogHome(props: {posts: any}) {
+    const listOfTags = [
+        "misc",
+        "dcd",
+        "tech"
+    ]
+    const router = useRouter();
+    const tag = router.query.tag || null;
+    var posts = props.posts;
+    if (tag) {
+        if (listOfTags.includes(tag as string)) {
+            posts = props.posts.filter((post: any) => post.tags.includes(tag));
+        } else {
+            return (
+                <h1>Invalid Tag!</h1>
+            )
+        }
+    }
     return  (
         <>
             <div className={grid.parent}>
                 <Navbar grid={grid}/>
                 <div className={grid.headerImage}></div>
+                <div className={grid.tags}>
+                    <center>
+                        <h2>Tags:</h2>
+                        {listOfTags.map((tag: string) => (
+                            <div key={tag}>
+                               <a href={`/blog?tag=${tag}`}>{tag}</a>
+                           </div>
+                        ))}
+                    </center>
+                </div>
+                <br />
                 <div className={grid.posts}>
                     <center>
-                        {props.posts.map((post: any) => (
-                            <>
-                                <div key={post.title} className="roundedBox">
+                        {posts.map((post: any) => (
+                            <div key={post.slug}>
+                                <div className="roundedBox">
                                     <h2>{post.title}</h2>
                                     <p>{post.description}</p>
                                     <a href={`/blog/${post.slug}`} style={{color: "#fff"}}>Read More</a>
                                 </div>
                                 <br />
-                            </>
+                            </div>
                         ))}
                     </center>
                 </div>
