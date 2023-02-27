@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { getAllPosts } from "@/lib/md";
 import grid from "@/styles/blogHomeGrid.module.scss";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function BlogHome(props: {posts: any}) {
@@ -11,7 +12,7 @@ export default function BlogHome(props: {posts: any}) {
     ]
     const router = useRouter();
     const tag = router.query.tag || null;
-    var posts = props.posts;
+    var posts: any[] = props.posts;
     if (tag) {
         if (listOfTags.includes(tag as string)) {
             posts = props.posts.filter((post: any) => post.tags.includes(tag));
@@ -21,6 +22,13 @@ export default function BlogHome(props: {posts: any}) {
             )
         }
     }
+    var newPosts: any[] = [];
+    posts.map((post: any) => {
+        if (Boolean(post.isPublished)) {
+            newPosts.push(post);
+        }
+    })
+    posts = newPosts;
     return  (
         <>
             <div className={grid.parent}>
@@ -31,7 +39,7 @@ export default function BlogHome(props: {posts: any}) {
                         <h2>Tags:</h2>
                         {listOfTags.map((tag: string) => (
                             <div key={tag}>
-                               <a href={`/blog?tag=${tag}`}>{tag}</a>
+                               <Link href={`/blog?tag=${tag}`}>{tag}</Link>
                            </div>
                         ))}
                     </center>
