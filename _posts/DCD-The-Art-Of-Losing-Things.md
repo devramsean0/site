@@ -1,7 +1,7 @@
 ---
 title: DCD, The art of losing things
 description: My anger post about DCD and me losing stuff
-isPublished: false
+isPublished: true
 publishedDate: 2023/02/27
 tags:
     - dcd
