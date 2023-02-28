@@ -24,7 +24,7 @@ export default function BlogHome(props: {posts: any}) {
     }
     var newPosts: any[] = [];
     posts.map((post: any) => {
-        if (Boolean(post.isPublished)) {
+        if (Boolean(post.isPublished) || process.env.NODE_ENV === "development") {
             newPosts.push(post);
         }
     })

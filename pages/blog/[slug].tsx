@@ -10,7 +10,6 @@ export default function BlogPost(props: {post: any}) {
     return (
       <div className={grid.parent}>
         <Navbar grid={grid} />
-        <div className={grid.headerImage}></div>
         <div className={grid.title}>
           <h2>{props.post.title}</h2>
         </div>
