@@ -10,8 +10,14 @@ export default function Home() {
     {
       job: "HWW reviewer",
       description: "Reviewed PRs for Hackclub's Hardware Winter Wonderland event",
-      date: "17th Jan 2022 - 24th Feb 2022",
+      date: "17th Jan 2023 - 24th Feb 2023",
       image: "https://assets.hackclub.com/icon-rounded.svg",
+    },
+    {
+      job: "Hack Club Bank OPS",
+      description: "Helped process perks and answer support questions in the Slack channel",
+      date: "27th Feb 2023 - ongoing",
+      image: "https://assets.hackclub.com/hack-club-bank-light.svg"
     }
   ]
   const portfolioProjects = [
