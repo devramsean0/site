@@ -8,7 +8,8 @@ export default function BlogHome(props: {posts: any}) {
     const listOfTags = [
         "misc",
         "dcd",
-        "tech"
+        "tech",
+        "diy8Bit"
     ]
     const router = useRouter();
     const tag = router.query.tag || null;
