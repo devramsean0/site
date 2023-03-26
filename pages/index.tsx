@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import animations from "@/styles/animations.module.scss";
 
 export default function Home() {
   const experience = [
@@ -23,7 +24,7 @@ export default function Home() {
   const portfolioProjects = [
     {
       name: "IkeaStock",
-      url: "https://ikeastock.app",
+      url: "https://github.com/Ikeastock",
       description: "A website that allows you to check the stock of a project in your local Ikea store",
     }
   ]
@@ -37,7 +38,7 @@ export default function Home() {
       </div>
       <div className={grid.about} id="about">
         <center>
-            <Image src="/images/me.png" alt="Me" width={200} height={200} />
+            <Image src="/me.png" alt="Me" width={400} height={500}/>
             <h2>Hi, 👋</h2>
             <p>
                 I'm 14 and a Student, Entrepeneur and Software Engineer,
@@ -51,7 +52,7 @@ export default function Home() {
           <h2>Portfolio</h2>
           {portfolioProjects.map((project) => (
             <>
-              <div className="roundedBox" key={project.name}>
+              <div className={`roundedBox ${animations.textSlideIn}`} key={project.name}>
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <Link href={project.url} style={{color: "#fff"}}>View Here</Link>
@@ -66,7 +67,7 @@ export default function Home() {
           <h2>Experience</h2>
           {experience.map((job) => (
             <>
-              <div className="roundedBox" key={job.job}>
+              <div className={`roundedBox ${animations.textSlideIn}`} key={job.job}>
                 <Image src={job.image} width={100} height={100} alt="Job Image" />
                 <h3>{job.job}</h3>
                 <p>{job.description}</p>
