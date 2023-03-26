@@ -34,7 +34,6 @@ export default function Home() {
       </Head>
       <div className={grid.parent}>
         <Navbar grid={grid}/>
-      <div className={grid.headerImage}>
       </div>
       <div className={grid.about} id="about">
         <center>
@@ -80,7 +79,6 @@ export default function Home() {
       </div>
       <div className={grid.footer}>
         <Footer />
-      </div>
       </div>
     </>
   )

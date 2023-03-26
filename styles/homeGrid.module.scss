@@ -1,7 +1,7 @@
 .parent {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 0.5fr repeat(4, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -12,7 +12,6 @@
 .navBtn4 { grid-area: 1 / 5 / 2 / 6; }
 .navBtn5 { grid-area: 1 / 6 / 2 / 7; }
 .navBtn6 { grid-area: 1 / 7 / 2 / 8; }
-.headerImage { grid-area: 2 / 2 / 3 / 7; }
 .about { grid-area: 3 / 2 / 4 / 7; }
 .portfolio { grid-area: 4 / 2 / 5 / 7; }
 .experience { grid-area: 5 / 2 / 6 / 7; }

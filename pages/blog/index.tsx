@@ -34,7 +34,6 @@ export default function BlogHome(props: {posts: any}) {
         <>
             <div className={grid.parent}>
                 <Navbar grid={grid}/>
-                <div className={grid.headerImage}></div>
                 <div className={grid.tags}>
                     <center>
                         <h2>Tags:</h2>
