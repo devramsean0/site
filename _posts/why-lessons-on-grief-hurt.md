@@ -22,3 +22,4 @@ it's now flooding my brain and i'm unable to cope.
 It could have been, and should have been opt in, I know this isn't always possible.
 But this was possible, and has been done in the past.
 When you have struggled with depression & loss in the past, adding a "Some people might struggle with the topics discussed in this classroom" disclaimer doesn't cut it.
+The government has made these lessons mandatory, without providing methods to not need to partake in lessons that effect you negatively. This needs to change!
