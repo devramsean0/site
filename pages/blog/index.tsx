@@ -9,7 +9,9 @@ export default function BlogHome(props: {posts: any}) {
         "misc",
         "dcd",
         "tech",
-        "diy8Bit"
+        "diy8Bit",
+        "my_past",
+        "school"
     ]
     const router = useRouter();
     const tag = router.query.tag || null;
