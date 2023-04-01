@@ -6,11 +6,12 @@ import grid from "@/styles/projectPostGrid.module.scss";
 
 export default function ProjectPost(props: {post: any}) {
   const publishedDate = props.post.publishedDate || '1970/01/01'
+  const shownDate = props.post.lastEdited ? `Last Edited: ${props.post.lastEdited}` : `Published: ${publishedDate}`
   return (
     <div className={grid.parent}>
       <Navbar grid={grid} />
       <div className={grid.postDate}>
-        {publishedDate}
+        {shownDate}
       </div>
       <div className={grid.postTitle}>
         {props.post.title}
@@ -29,6 +30,7 @@ export async function getStaticProps(params: any) {
     'publishedDate',
     'slug',
     'content',
+    'lastEdited'
   ])
   const content = await markdownToHtml(post.content || '')
   
