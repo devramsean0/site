@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/navbar";
-import { getAllPosts } from "@/lib/md";
+import { MDhandler } from "@/lib/md";
 import grid from "@/styles/blogHomeGrid.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -64,7 +64,8 @@ export default function BlogHome(props: {posts: any}) {
     )
 }
 export const getStaticProps = async () => {
-    const posts = getAllPosts([
+    const md = new MDhandler("_posts")
+    const posts = md.getAllPosts([
         'title',
         'description',
         'isPublished',

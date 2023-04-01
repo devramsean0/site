@@ -1,12 +1,11 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar"
-import { getPostBySlug, getAllPosts } from "@/lib/md"
+import { MDhandler } from "@/lib/md"
 import markdownToHtml from "@/lib/mdtohtml"
 import grid from "@/styles/blogPostGrid.module.scss";
 
 export default function BlogPost(props: {post: any}) {
     const publishedDate = props.post.publishedDate || '1970/01/01'
-    console.log(props.post)
     return (
       <div className={grid.parent}>
         <Navbar grid={grid} />
@@ -31,36 +30,37 @@ export default function BlogPost(props: {post: any}) {
     )
 }
 export async function getStaticProps(params: any) {
-    const post = getPostBySlug(params.params.slug, [
-      'title',
-      'publishedDate',
-      'tags',
-      'slug',
-      'content',
-    ])
-    const content = await markdownToHtml(post.content || '')
+  const md = new MDhandler("_posts")
+  const post = md.getPostBySlug(params.params.slug, [
+    'title',
+    'publishedDate',
+    'tags',
+    'slug',
+    'content',
+  ])
+  const content = await markdownToHtml(post.content || '')
   
-    return {
-      props: {
-        post: {
-          ...post,
-          content,
-        },
+  return {
+    props: {
+      post: {
+        ...post,
+        content,
       },
-    }
+    },
   }
+}
   
-  export async function getStaticPaths() {
-    const posts = getAllPosts(['slug'])
-  
-    return {
-      paths: posts.map((post) => {
-        return {
-          params: {
-            slug: post.slug,
-          },
-        }
-      }),
-      fallback: false,
-    }
+export async function getStaticPaths() {
+  const md = new MDhandler("_posts")
+  const posts = md.getAllPosts(['slug'])
+  return {
+    paths: posts.map((post) => {
+      return {
+        params: {
+          slug: post.slug,
+        },
+      }
+    }),
+    fallback: false,
   }
+}
