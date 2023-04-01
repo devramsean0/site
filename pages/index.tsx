@@ -7,6 +7,13 @@ import { Footer } from "@/components/footer";
 import animations from "@/styles/animations.module.scss";
 
 export default function Home() {
+  const projects = [
+    {
+      name: "6502 8Bit Computer",
+      url: "/diy8Bit",
+      yearCompleted: "2023"
+    }
+  ]
   const experience = [
     {
       job: "HWW reviewer",
@@ -72,6 +79,21 @@ export default function Home() {
                 <h3>{job.job}</h3>
                 <p>{job.description}</p>
                 <p>{job.date}</p>
+              </div>
+              <br />
+            </>
+          ))}
+        </center>
+      </div>
+      <div className={grid.projects} id="projects">
+        <center>
+          <h2>Projects</h2>
+          {projects.map((project) => (
+            <>
+              <div className={`roundedBox ${animations.textSlideIn}`} key={project.name}>
+                <h3>{project.name}</h3>
+                <p>Year Completed: {project.yearCompleted}</p>
+                <Link href={project.url} style={{color: "#fff"}}>View my progress here.</Link>
               </div>
               <br />
             </>
