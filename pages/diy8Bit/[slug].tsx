@@ -15,9 +15,7 @@ export default function ProjectPost(props: {post: any}) {
       <div className={grid.postTitle}>
         {props.post.title}
       </div>
-      <div className={grid.content}>
-        {props.post.content}
-      </div>
+      <div className={grid.content} dangerouslySetInnerHTML={{ __html: props.post.content }} />
       <div className={grid.footer}>
         <Footer />
       </div>
@@ -29,7 +27,6 @@ export async function getStaticProps(params: any) {
   const post = md.getPostBySlug(params.params.slug, [
     'title',
     'publishedDate',
-    'tags',
     'slug',
     'content',
   ])
