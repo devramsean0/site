@@ -2,25 +2,26 @@ import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { MDhandler } from "@/lib/md"
 import markdownToHtml from "@/lib/mdtohtml"
-import grid from "@/styles/projectPostGrid.module.scss";
+import { Container, Divider, Grid } from "theme-ui";
 
 export default function ProjectPost(props: {post: any}) {
   const publishedDate = props.post.publishedDate || '1970/01/01'
   const shownDate = props.post.lastEdited ? `Last Edited: ${props.post.lastEdited}` : `Published: ${publishedDate}`
   return (
-    <div className={grid.parent}>
-      <Navbar grid={grid} />
-      <div className={grid.postDate}>
-        {shownDate}
-      </div>
-      <div className={grid.postTitle}>
-        {props.post.title}
-      </div>
-      <div className={grid.content} dangerouslySetInnerHTML={{ __html: props.post.content }} />
-      <div className={grid.footer}>
+    <>
+      <Navbar />
+      <center>
+        <Grid columns={[1, null, 2]} gap={3}>
+          <p>{shownDate}</p>
+          <h3>{props.post.title}</h3>
+        </Grid>
+        <Divider />
+        <Container>
+          <div dangerouslySetInnerHTML={{ __html: props.post.content }} />
+        </Container>
         <Footer />
-      </div>
-    </div>
+      </center>
+    </>
   )
 }
 export async function getStaticProps(params: any) {

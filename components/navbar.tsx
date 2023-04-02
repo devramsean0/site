@@ -1,11 +1,11 @@
 import Icon from "@hackclub/icons"
 import Link from "next/link"
-import animations from "@/styles/animations.module.scss"
+import { Grid, NavLink } from "theme-ui"
 
-export function Navbar(props: {grid: any}) {
+export function Navbar() {
     return (
         <>
-            <div className={props.grid.name}>
+{/*         <div className={props.grid.name}>
                 <Link className={animations.textFadeIn} href="/">Sean Outram</Link>
             </div>
             <div className={props.grid.navBtn1}>
@@ -33,7 +33,15 @@ export function Navbar(props: {grid: any}) {
                 <a href="mailto:outramsean0@gmail.com"><Icon glyph="email"size={55}/></a>
                 <a href="https://github.com/devramsean0"><Icon glyph="github"size={55}/></a>
                 </center>
-            </div>
+            </div> */}
+            <Grid variant="nav" gap={1} columns={[2, null, 6]}>
+                <NavLink href="/"><h2>Sean Outram</h2></NavLink>
+                <NavLink href="/#about"><h2>About</h2></NavLink>
+                <NavLink href="/#experience"><h2>Experience</h2></NavLink>
+                <NavLink href="/#portfolio"><h2>Portfolio</h2></NavLink>
+                <NavLink href="/blog"><h2>Blog</h2></NavLink>
+                <NavLink href="mailto:outramsean0@gmail.com"><h2><Icon glyph="email" size={64}/></h2></NavLink>
+            </Grid>
         </>
     )
 }
