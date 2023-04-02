@@ -1,18 +1,25 @@
+import { Navbar } from "@/components/navbar";
 import { MDhandler } from "@/lib/md";
-import Link from "next/link";
+import { Container, Grid, Link } from "theme-ui";
 
 export default function PrtjectHome(props: {posts: any}) {
     return (
         <>
-            <h1>Diy 8Bit Computer</h1>
-            <ul>
-                {props.posts.map((post: any) => (
-                    <li key={post.slug}>
-                        <a href={`/diy8Bit/${post.slug}`}>{post.title}</a>
-                    </li>
-                ))}
-            </ul>
-            <Link href="/">[Return Home]</Link>
+            <Navbar />
+            <center>
+                <h1>Diy 6502 Based 8 Bit Computer</h1>
+            </center>
+            <Grid columns={[2, null, 2]} gap={2}>
+                {/* Blog Articles */}
+                <Container>
+                    <h2>Blog Posts</h2>
+                    <ul>
+                        {props.posts.map((post: any) => (
+                            <li key={post.slug}><Link href={post.slug}>{post.title}</Link></li>
+                        ))}
+                    </ul>
+                </Container>
+            </Grid>
         </>
     )
 }
