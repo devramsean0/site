@@ -19,6 +19,18 @@ export default function PrtjectHome(props: {posts: any}) {
                         ))}
                     </ul>
                 </Container>
+                <Container>
+                    <h2>Live Stream</h2>
+                    <p>Not online</p>
+                </Container>
+                <Container>
+                    <h2>What the CPU is doing</h2>
+                    <p>Not online</p>
+                </Container>
+                <Container>
+                    <h2>Text to display</h2>
+                    <p>Not online</p>
+                </Container>
             </Grid>
         </>
     )
