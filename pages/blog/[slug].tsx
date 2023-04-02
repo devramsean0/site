@@ -9,26 +9,6 @@ import { Grid } from "theme-ui";
 export default function BlogPost(props: {post: any}) {
     const publishedDate = props.post.publishedDate || '1970/01/01'
     return (
-/*       <div className={grid.parent}>
-        <Navbar/>
-        <div className={grid.title}>
-          <h2>{props.post.title}</h2>
-        </div>
-        <div className={grid.publishedDate}>
-          <h3>{String(publishedDate)}</h3>
-        </div>
-        <div className={grid.tags}>
-          <ul>
-          {props.post.tags.map((tag: string) => (
-            <li key={tag}>{tag}</li>
-          ))}
-          </ul>
-        </div>
-        <div className={grid.content} dangerouslySetInnerHTML={{ __html: props.post.content }} />
-        <div className={grid.footer}>
-          <Footer />
-        </div>
-      </div> */
       <>
         <Navbar />
         <Grid columns={[1, null, 3]} gap={1}>
