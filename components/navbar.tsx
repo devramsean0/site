@@ -1,6 +1,6 @@
 import Icon from "@hackclub/icons"
 import Link from "next/link"
-import { Grid, NavLink } from "theme-ui"
+import { Grid, Heading, NavLink } from "theme-ui"
 
 export function Navbar() {
     return (
@@ -35,12 +35,12 @@ export function Navbar() {
                 </center>
             </div> */}
             <Grid variant="nav" gap={1} columns={[2, null, 6]}>
-                <NavLink href="/"><h2>Sean Outram</h2></NavLink>
-                <NavLink href="/#about"><h2>About</h2></NavLink>
-                <NavLink href="/#experience"><h2>Experience</h2></NavLink>
-                <NavLink href="/#portfolio"><h2>Portfolio</h2></NavLink>
-                <NavLink href="/blog"><h2>Blog</h2></NavLink>
-                <NavLink href="mailto:outramsean0@gmail.com"><h2><Icon glyph="email" size={64}/></h2></NavLink>
+                <NavLink href="/"><Heading variant="headingWithWhiteHighlight">Sean Outram</Heading></NavLink>
+                <NavLink href="/#about"><Heading variant="headingWithWhiteHighlight">About</Heading></NavLink>
+                <NavLink href="/#experience"><Heading variant="headingWithWhiteHighlight">Experience</Heading></NavLink>
+                <NavLink href="/#portfolio"><Heading variant="headingWithWhiteHighlight">Portfolio</Heading></NavLink>
+                <NavLink href="/blog"><Heading variant="headingWithWhiteHighlight">Blog</Heading></NavLink>
+                <NavLink href="mailto:outramsean0@gmail.com"><Heading variant="headingWithWhiteHighlight"><Icon glyph="email" size={64}/></Heading></NavLink>
             </Grid>
         </>
     )

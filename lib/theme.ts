@@ -32,6 +32,13 @@ export const theme = {
         lineHeight: 'heading',
         fontWeight: 'heading',
       },
+      headingWithWhiteHighlight: {
+        fontFamily: 'heading',
+        lineHeight: 5,
+        fontWeight: 'heading',
+        backgroundColor: "white",
+        opacity: "50%"
+      }
     },
     styles: {
       root: {
@@ -46,6 +53,7 @@ export const theme = {
       h2: {
         variant: 'text.heading',
         fontSize: 4,
+        opacity: "100%"
       },
       h3: {
         variant: 'text.heading',
