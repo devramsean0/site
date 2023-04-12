@@ -45,6 +45,13 @@ export default function Home() {
             <br />
             Currently working with the amazing team over at <Link href="https://hackclub.com/bank">Hack Club Bank</Link>
           </Paragraph>
+          I'm currently using these tools:
+          <ul>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>Theme-Ui</li>
+            <li>Rust</li>
+          </ul>
         </center>
       </Container>
       <Divider />
