@@ -1,3 +1,6 @@
 [submodule "_projects/diy8Bit"]
 	path = _projects/diy8Bit
 	url = https://github.com/devramsean0/8bitProject.git
+[submodule "docs"]
+	path = docs
+	url = https://github.com/devramsean0/docs.git
