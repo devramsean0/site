@@ -4,3 +4,6 @@
 [submodule "docs"]
 	path = docs
 	url = https://github.com/devramsean0/docs.git
+[submodule "_projects/traffic-light-project"]
+	path = _projects/traffic-light-project
+	url = https://github.com/devramsean0/traffic-light-project
