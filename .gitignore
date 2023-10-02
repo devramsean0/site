@@ -17,6 +17,7 @@
 /public/sitemap*.xml
 /public/sitemap*.html
 /public/robots.txt
+/public/files/traffic-light-project/financials.xlsx
 # misc
 .DS_Store
 *.pem

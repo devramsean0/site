@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "postbuild": "next-sitemap && node scripts/genSitemapPages"
+    "postbuild": "node scripts/moveFilesIntoCorrectPlace.js && next-sitemap && node scripts/genSitemapPages"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
