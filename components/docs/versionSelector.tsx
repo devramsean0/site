@@ -4,6 +4,8 @@ import { Select, Button } from "theme-ui";
 export function VersionSelector(params: {packageName: string, versions: string[], includeAdditionalURL: boolean, additionalURL?: string }) {
     const router = useRouter();
     const gotoFunction = (e: any) => {
+        const branchVersions = params.versions.filter((v) => v.startsWith("branch");
+        const releaseVersions = params.versions.filter((v) => v.startsWith("v");
         const version = (document.getElementById("versionSelect") as any).value;
         if (params.includeAdditionalURL === false) {
             router.push(`/docs/${params.packageName}/${version}`);
@@ -15,7 +17,10 @@ export function VersionSelector(params: {packageName: string, versions: string[]
         <>
             <label htmlFor="versionSelect">Select Version:</label>
             <Select name="versionSelect" id="versionSelect" defaultValue="main">
-                {params.versions.map((version) => {
+                {releaseVersions.map((version) => {
+                    return <option key={version} value={version}>{version}</option>
+                })}
+                 {branchVersions.map((version) => {
                     return <option key={version} value={version}>{version}</option>
                 })}
             </Select>
