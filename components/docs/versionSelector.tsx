@@ -4,8 +4,8 @@ import { Select, Button } from "theme-ui";
 export function VersionSelector(params: {packageName: string, versions: string[], includeAdditionalURL: boolean, additionalURL?: string }) {
     const router = useRouter();
     const gotoFunction = (e: any) => {
-        const branchVersions = params.versions.filter((v) => v.startsWith("branch");
-        const releaseVersions = params.versions.filter((v) => v.startsWith("v");
+        const branchVersions = params.versions.filter((v) => v.startsWith("branch"));
+        const releaseVersions = params.versions.filter((v) => v.startsWith("v"));
         const version = (document.getElementById("versionSelect") as any).value;
         if (params.includeAdditionalURL === false) {
             router.push(`/docs/${params.packageName}/${version}`);
