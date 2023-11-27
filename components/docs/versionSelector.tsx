@@ -16,7 +16,7 @@ export function VersionSelector(params: {packageName: string, versions: string[]
     return (
         <>
             <label htmlFor="versionSelect">Select Version:</label>
-            <Select name="versionSelect" id="versionSelect" defaultValue="main">
+            <Select name="versionSelect" id="versionSelect" defaultValue="branch-main">
                 {releaseVersions.map((version) => {
                     return <option key={version} value={version}>{version}</option>
                 })}
