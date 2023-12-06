@@ -5,7 +5,7 @@ export async function docsGetListOfProjects() {
     const data = await fs.readdir(`${process.cwd()}/docs/docs`)
     return data
 }
-export async function docsGetReadmeFromProject(projectName: string, jsonFile = 'branch-main') {
+export async function docsGetReadmeFromProject(projectName: string, jsonFile = 'current-branch-main') {
     const unparsedData = await fs.readFile(`${process.cwd()}/docs/docs/${projectName}/${jsonFile}.json`, 'utf-8');
     const data = JSON.parse(unparsedData)
     const parsedMD = await markdownToHtml(data.readme)
