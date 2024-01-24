@@ -1,4 +1,6 @@
 <script>
     import "../app.css";
 </script>
-<slot />
+<main class="bg-background text-white">
+    <slot />
+</main>
