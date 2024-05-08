@@ -10,7 +10,6 @@
     "export": "next export",
     "postbuild": "node scripts/moveFilesIntoCorrectPlace.js && next-sitemap && node scripts/genSitemapPages"
   },
-  "type":"module",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@hackclub/icons": "^0.0.12",
