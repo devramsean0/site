@@ -10,6 +10,7 @@
     "export": "next export",
     "postbuild": "node scripts/moveFilesIntoCorrectPlace.js && next-sitemap && node scripts/genSitemapPages"
   },
+  "type":"module",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@hackclub/icons": "^0.0.12",
@@ -28,7 +29,7 @@
     "react-markdown": "^8.0.5",
     "sass": "^1.58.3",
     "theme-ui": "^0.15.7",
-    "typedoc-json-parser": "^8.2.0",
+    "typedoc-json-parser": "^10.0.0",
     "typescript": "4.9.5"
   }
 }
