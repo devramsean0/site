@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
+    "prebuild": "npx update-browserslist-db@latest",
     "postbuild": "node scripts/moveFilesIntoCorrectPlace.js && next-sitemap && node scripts/genSitemapPages"
   },
   "type":"module",
