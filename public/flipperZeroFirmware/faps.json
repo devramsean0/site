@@ -1,9 +1,0 @@
-{
-    "modules": [
-        { 
-            "name": "Infrared_Shortcuts",
-            "submodule": "https://github.com/devramsean0/FZ-Infrared-Shortcuts.git",
-            "public": false
-        }
-    ]
-}
