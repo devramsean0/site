@@ -1,21 +1,20 @@
 {
-  "name": "example-with-tailwindcss",
+  "name": "site",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@solidjs/router": "^0.13.3",
-    "@solidjs/start": "^1.0.0-rc.1",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "solid-js": "^1.8.17",
-    "tailwindcss": "^3.4.3",
-    "vinxi": "^0.3.11"
-  },
-  "engines": {
-    "node": ">=18"
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.5",
+    "astro": "^4.10.1",
+    "@astrojs/check": "^0.7.0",
+    "typescript": "^5.4.5"
   }
 }

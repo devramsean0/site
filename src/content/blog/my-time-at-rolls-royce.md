@@ -1,10 +1,8 @@
 ---
 title: My Time at Rolls Royce Electrical
 description: A miniature retrospective logbook from my week of work experience at RRE at their Derby site
-isPublished: true
-publishedDate: 2023/07/06
-tags:
-    - misc
+pubDate: 2023/07/06
+heroImage: /blog-placeholder-2.jpg
 ---
 # A bit of background
 Work experience is a week long event mandated by the Government where you go and enter the workforce and get to know what it's like.

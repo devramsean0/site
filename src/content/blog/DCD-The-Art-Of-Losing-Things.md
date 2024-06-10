@@ -1,10 +1,8 @@
 ---
 title: DCD, The art of losing things
 description: My anger post about DCD and me losing stuff
-isPublished: true
-publishedDate: 2023/02/27
-tags:
-    - dcd
+pubDate: 2023/02/27
+heroImage: /blog-placeholder-2.jpg
 ---
 # What is DCD anyway?
 DCD or developmental co-ordination discorder (which is also known as dispraxia) comes with a few negatives for the people who have to deal with it on a daily basis.

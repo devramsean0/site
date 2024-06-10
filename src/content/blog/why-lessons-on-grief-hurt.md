@@ -1,12 +1,8 @@
 ---
 title: Why lessons on grief hurt.
 description: Why lessons on things like grief hurt me.
-isPublished: true
-publishedDate: 2023/03/27
-tags:
-    - misc
-    - my_past
-    - school
+pubDate: 2023/03/27
+heroImage: /blog-placeholder-2.jpg
 ---
 # Introduction
 I grew up with a cat, who I was incredibly close to and knew my entire life up until the point he died.
