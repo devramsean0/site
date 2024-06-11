@@ -2,7 +2,10 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import LinkedInExperience from '../components/Home/experience.jsx';
+import History from '../components/Home/history.jsx';
+import {Image } from 'astro:assets';
+// Images
+import HomeHeader from '../assets/HomeHeader.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -15,15 +18,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="hero-image">
-				<img width={1020} src="/HomeHeader.jpg" alt="A photo of a sunset over a forest in Finland" />
+				<Image width={1020} src={HomeHeader} alt="A sunset over a forest in Finland" />
 			</div>
 			<h1>👋 Hi!</h1>
 			<p>
 				I'm a web developer and designer based in the UK. I'm passionate about semi-minimalist sites that work well :)
 			</p>
 			<section>
-				<h2>Experience</h2>
-				<LinkedInExperience use:client />
+				<History client:only="solid-js" />
 			</section>
 		</main>
 		<Footer />

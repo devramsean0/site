@@ -1,0 +1,70 @@
+.history-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  padding-left: 30px; /* Adjusted space for the timeline */
+}
+
+.history-pane {
+  position: relative;
+}
+
+.history-pane h2 {
+  margin-top: 0;
+}
+
+.history-entry {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: flex-start;
+}
+
+.history-entry-marker {
+  position: absolute;
+  left: -14px; /* Adjusted to align with the timeline line */
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.history-entry-content {
+  padding-left: 20px; /* Space to align with the timeline marker */
+}
+
+.history-entry-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-entry-role {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.history-entry-company {
+  color: #555;
+}
+
+.history-entry-dates,
+.history-entry-location {
+  color: #888;
+}
+
+.history-entry-description {
+  margin-top: 5px;
+}
+
+.history-pane::before {
+  content: '';
+  position: absolute;
+  left: -10px; /* Adjusted to align the vertical line */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ddd;
+}
