@@ -1,0 +1,27 @@
+.newsletterForm-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 1rem;
+}
+
+.newsletterForm-input {
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    border: 2px solid rgb(var(--gray-light));
+    border-radius: 25px;
+}
+
+.newsletterForm-button {
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--accent);
+    color: white;
+}
+.newsletterForm-button:hover {
+    background-color: var(--accent-dark);
+}
