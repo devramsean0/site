@@ -2432,13 +2432,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"crypto@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "crypto@npm:1.0.1"
-  checksum: 10c0/fcf7dbd68ac5415b7fde7d7208fe203038e92e83e8a8fcf6e86ab4771ce3dd026d6967a990ba56b9d1c771378210814d5c90d907d3739fbd1723d552ad6c8ab8
-  languageName: node
-  linkType: hard
-
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -5917,7 +5910,6 @@ __metadata:
     "@astrojs/vercel": "npm:^7.7.0"
     "@prisma/client": "npm:^5.15.0"
     astro: "npm:^4.10.1"
-    crypto: "npm:^1.0.1"
     prisma: "npm:^5.15.0"
     sharp: "npm:^0.33.4"
     solid-js: "npm:^1.8.17"
