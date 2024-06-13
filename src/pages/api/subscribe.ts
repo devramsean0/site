@@ -1,6 +1,8 @@
 export async function POST({ request } : { request: Request }) {
     const data = await request.formData();
     const email = data.get('email');
+    const firstName = data.get('firstName');
+    const lastName = data.get('lastName');
     // Create contact in Loop
     const req = await fetch(`https://app.loops.so/api/v1/contacts/create`, {
         method: 'POST',
@@ -10,6 +12,8 @@ export async function POST({ request } : { request: Request }) {
         },
         body: JSON.stringify({
             email,
+            firstName,
+            lastName,
             source: `website-${import.meta.env.MODE}`,
 
         })

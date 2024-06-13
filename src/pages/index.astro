@@ -8,7 +8,8 @@ import {Image } from 'astro:assets';
 // Images
 import HomeHeader from '../assets/HomeHeader.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-
+import { Guestbook } from '../components/Home/guestbook';
+1
 export const prerender = true
 ---
 
@@ -28,8 +29,9 @@ export const prerender = true
 				I'm a web developer and designer based in the UK. I'm passionate about semi-minimalist sites that work well :)
 			</p>
 			<section>
-				<History client:only="solid-js" />
+				<History />
 				<NewsletterForm client:only="solid-js"/>
+				<Guestbook client:only="solid-js" />
 			</section>
 		</main>
 		<Footer />

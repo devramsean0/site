@@ -1,10 +1,13 @@
-.newsletterForm-container {
-    display: flex;
+.newsletterForm-supercontainer {
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: 20px;
     margin: 1rem;
+}
+
+.newsletterForm-container {
+    display: flex;
 }
 
 .newsletterForm-input {
@@ -14,14 +17,12 @@
     border: 2px solid rgb(var(--gray-light));
     border-radius: 25px;
 }
-
+.newsletterForm-input:focus {
+    outline: none;
+    border: 2px solid var(--accent);
+}
 .newsletterForm-button {
-    padding: 10px;
     border-radius: 25px;
     border: none;
-    background-color: var(--accent);
     color: white;
-}
-.newsletterForm-button:hover {
-    background-color: var(--accent-dark);
 }
