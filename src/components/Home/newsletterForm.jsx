@@ -15,7 +15,7 @@ export default function NewsletterForm() {
     };
     return (
         <div>
-            <h2>Subscribe to my newsletter</h2>
+            <h2 style="padding-top: 10px;">Subscribe to my newsletter</h2>
             <p>
                 Get updates on my latest projects, blog posts and what I'm learning.
                 I promise to keep it spam free, and at a maximum of one email per month

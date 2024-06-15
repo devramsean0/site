@@ -26,3 +26,14 @@
     border: none;
     color: white;
 }
+
+/* Dark mode */
+.dark .newsletterForm-input {
+    background-color: rgb(var(--black));
+    border-color: rgb(var(--gray-dark));
+    color: white;
+}
+
+.dark .newsletterForm-button {
+    background-color: var(--black);
+}

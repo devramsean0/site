@@ -69,3 +69,22 @@
   width: 2px;
   background-color: #ddd;
 }
+
+
+/* Dark Mode */
+body.dark .history-entry-dates,
+body.dark .history-entry-location {
+  color: #aaa !important;
+}
+
+body.dark .history-entry-company {
+  color: #aaa !important;
+}
+
+body.dark .history-entry-description {
+  color: #aaa !important;
+}
+
+body.dark .history-pane::before {
+  background-color: #333;
+}

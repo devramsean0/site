@@ -19,12 +19,13 @@
 }
 .guestbook-form-input:focus {
     outline: none;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--accent) !important;
 }
 
 .guestbook-form-button {
     border-radius: 25px;
     border: none;
+    background-color: white;
     color: white;
 }
 
@@ -56,3 +57,17 @@
 }
 
 
+/* Dark mode */
+.dark .guestbook-form-input {
+    background-color: rgb(var(--black));
+    border-color: rgb(var(--gray-dark));
+    color: white;
+}
+
+.dark .guestbook-form-button {
+    background-color: var(--black);
+}
+
+.dark .guestbook-entry {
+    color: white;
+}

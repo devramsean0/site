@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import ThemeIcon from './ThemeIcon.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -22,13 +23,13 @@ import { SITE_TITLE } from '../consts';
 				>
 			</a>
 		</div>
+		<ThemeIcon />
 	</nav>
 </header>
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 	h2 {
@@ -63,5 +64,10 @@ import { SITE_TITLE } from '../consts';
 		.social-links {
 			display: none;
 		}
+	}
+
+	.dark header {
+		background-color: rgb(var(--black)) !important;
+		color: white;
 	}
 </style>
