@@ -42,6 +42,7 @@
 }
 
 .history-entry-role {
+  font-family: var(--header-font);
   font-weight: bold;
   font-size: 1.2em;
 }

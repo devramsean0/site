@@ -67,7 +67,7 @@ export function Guestbook() {
                 ))}
             </div>
             <p>
-                You can update your photos by visiting <a href="https://en.gravatar.com/">Gravitar</a>
+                You can update your profile photo by visiting <a href="https://en.gravatar.com/">Gravatar</a> :)
             </p>
         </div>
     );

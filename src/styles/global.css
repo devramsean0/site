@@ -4,6 +4,9 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IS:wght@100..400&display=swap');
+
+
 :root {
 	--accent: #ff2a23;
 	--accent-dark: #c0211b;
@@ -14,6 +17,8 @@
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
+	--header-font: 'Playwrite IS', sans-serif;
+	--body-font: 'Atkinson', sans-serif;
 }
 @font-face {
 	font-family: 'Atkinson';
@@ -30,7 +35,7 @@
 	font-display: swap;
 }
 body {
-	font-family: 'Atkinson', sans-serif;
+	font-family: var(--body-font);
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -59,18 +64,23 @@ h6 {
 	line-height: 1.2;
 }
 h1 {
+	font-family: var(--header-font);
 	font-size: 3.052em;
 }
 h2 {
+	font-family: var(--header-font);
 	font-size: 2.441em;
 }
 h3 {
+	font-family: var(--header-font);
 	font-size: 1.953em;
 }
 h4 {
+	font-family: var(--header-font);
 	font-size: 1.563em;
 }
 h5 {
+	font-family: var(--header-font);
 	font-size: 1.25em;
 }
 strong,
